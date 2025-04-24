@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Potato Paradise 🥔</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Potato Paradise 🥔</h1>
+            <p>Your one-stop shop for spud-tacular potatoes!</p>
+        </header>
+
+        <!-- Event Handling Section -->
+        <section>
+            <h2>Spin the Potato!</h2>
+            <button id="spinButton">Spin for a Surprise!</button>
+            <p id="status">Click, hover, double-click, or press a key to join the potato party!</p>
+        </section>
+
+        <!-- Interactive Elements: Potato Slideshow -->
+        <section>
+            <h2>Our Potato Varieties</h2>
+            <div class="slideshow">
+                <img id="slideImage" src="https://images.pexels.com/photos/7456543/pexels-photo-7456543.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Potato Slide">
+                <button onclick="prevSlide()">Previous</button>
+                <button onclick="nextSlide()">Next</button>
+            </div>
+        </section>
+
+        <!-- Interactive Elements: Recipe Tabs -->
+        <section>
+            <h2>Potato Recipes</h2>
+            <div class="tabs">
+                <button class="tab-button active" onclick="openTab(1)">Mashed Potatoes</button>
+                <button class="tab-button" onclick="openTab(2)">Fries</button>
+                <button class="tab-button" onclick="openTab(3)">Potato Soup</button>
+            </div>
+            <div id="tab1" class="tab-content active">
+                <h3>Creamy Mashed Potatoes</h3>
+                <p>Boil Russet potatoes, mash with butter, cream, and a pinch of salt for a fluffy delight!</p>
+            </div>
+            <div id="tab2" class="tab-content">
+                <h3>Crispy Fries</h3>
+                <p>Slice Yukon Gold potatoes, fry until golden, and sprinkle with sea salt. Dip in ketchup!</p>
+            </div>
+            <div id="tab3" class="tab-content">
+                <h3>Potato Soup</h3>
+                <p>Simmer Red potatoes with leeks, broth, and cream for a cozy, hearty soup.</p>
+            </div>
+        </section>
+
+        <!-- Form Validation: Contact/Order Form -->
+        <section>
+            <h2>Order Your Potatoes</h2>
+            <form id="orderForm">
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" required>
+                    <span class="error" id="nameError"></span>
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+                    <span class="error" id="emailError"></span>
+                </div>
+                <div>
+                    <label for="password">Password (for account, min 8 chars):</label>
+                    <input type="password" id="password" required>
+                    <span class="error" id="passwordError"></span>
+                </div>
+                <div>
+                    <label for="potatoType">Favorite Potato Type:</label>
+                    <input type="text" id="potatoType" required>
+                    <span class="error" id="potatoTypeError"></span>
+                </div>
+                <button type="submit">Place Order</button>
+            </form>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
